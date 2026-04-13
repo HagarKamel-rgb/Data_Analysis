@@ -12,7 +12,6 @@ print("Average Tip:", df["tip"].mean())
 print("Tips by Day:")
 print(df.groupby("day")["tip"].sum())
 
-# رسم
 df.groupby("day")["tip"].sum().plot(kind='bar')
 plt.title("Total Tips by Day")
 plt.show()
