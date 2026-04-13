@@ -4,14 +4,12 @@ import matplotlib.pyplot as plt
 df = pd.read_csv(r"E:\pythonnn\DataAnalysis\tips.csv")
 print(df.head())
 
-# تنظيف البيانات
 df.dropna(inplace=True)
 
-# تحليل
 print("Total Tips:", df["tip"].sum())
 print("Average Tip:", df["tip"].mean())
 
-print("\nTips by Day:")
+print("Tips by Day:")
 print(df.groupby("day")["tip"].sum())
 
 # رسم
